@@ -1,6 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
+    tweetDisabled: function () {
+        var name = this.get('name'),
+            draft = this.get('tweetDraft');
+
+        if (name && draft && name !== '' && draft !== '' && draft.length < 160) {
+            return false;
+        } else {
+            return true;
+        }
+    }.property('name', 'tweetDraft'),
+
     actions: {
         tweet: function () {
             var author = this.get('name'),

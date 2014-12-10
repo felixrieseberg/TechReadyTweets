@@ -10,7 +10,7 @@
             {{input value=tweetDraft type="text" class="form-control floating-label" placeholder="What's your tweet?"}}
         </div>
         <div class="col-md-2 col-md-offset-10 text-right">
-            <a {{action 'tweet'}} class="btn btn-primary btn-raised">Tweet</a>
+            <button {{action 'tweet'}} {{bind-attr disabled=tweetDisabled}} class="btn btn-primary btn-raised">Tweet</button>
         </div>
     </div>
 </div>
