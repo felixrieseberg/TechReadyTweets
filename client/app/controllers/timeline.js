@@ -12,6 +12,19 @@ export default Ember.Controller.extend({
         }
     }.property('name', 'tweetDraft'),
 
+    init: function () { 
+        this.updateTimeProperty();
+    },
+
+    refreshData: function () {
+        var self = this;
+        Ember.run.later(this, function() {
+            self.get('model').reload();
+            self.refreshData();
+            console.log('reload');
+        }, 600);
+    },
+
     actions: {
         tweet: function () {
             var author = this.get('name'),
