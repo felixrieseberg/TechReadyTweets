@@ -12,4 +12,4 @@ var app = fortune ({
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.listen(1337);
+app.listen(process.env.PORT || 80);
