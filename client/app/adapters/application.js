@@ -2,7 +2,7 @@ import App from '../app';
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-    host: 'http://localhost:1337'
+    host: 'http://techreadytwitter.azurewebsites.net'
 });
 
 // Uncomment to use local storage!
