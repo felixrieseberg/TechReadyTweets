@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-
     tweetDisabled: function () {
         var name = this.get('name'),
             draft = this.get('tweetDraft');
