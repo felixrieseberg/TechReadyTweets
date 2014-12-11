@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     }.property('name', 'tweetDraft'),
 
     init: function () { 
-        this.updateTimeProperty();
+        this.refreshData();
     },
 
     refreshData: function () {
