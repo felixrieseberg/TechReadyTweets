@@ -18,11 +18,13 @@ export default Ember.Controller.extend({
                 message = this.get('tweetDraft'),
                 timestamp = new Date().getTime();
 
-            this.store.createRecord('tweet', {
+            var tweet = this.store.createRecord('tweet', {
                 author: author,
                 message: message,
                 timestamp: timestamp
             });
+
+            tweet.save();
         }
     }
 });
