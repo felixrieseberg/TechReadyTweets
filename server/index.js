@@ -1,4 +1,5 @@
-var fortune = require('fortune');
+var fortune = require('fortune'),
+	express = require('express');
 
 var app = fortune ({
     db: 'techreadytweets'
@@ -7,5 +8,8 @@ var app = fortune ({
     author: String,
     message: String,
     timestamp: Number 
-  })
-  .listen(1337);
+  });
+
+app.use('/app', express.static(__dirname + '/../client/dist'));
+
+app.listen(1337);
