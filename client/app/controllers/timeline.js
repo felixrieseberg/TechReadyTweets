@@ -19,9 +19,8 @@ export default Ember.Controller.extend({
     refreshData: function () {
         var self = this;
         Ember.run.later(this, function() {
-            self.get('model').reload();
+            self.store.find('tweet');
             self.refreshData();
-            console.log('reload');
         }, 600);
     },
 
