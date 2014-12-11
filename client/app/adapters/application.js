@@ -1,7 +1,9 @@
-import App from '../app';
+// import App from '../app';
 import DS from 'ember-data';
 
-export default DS.RESTAdapter.extend();
+export default DS.RESTAdapter.extend({
+    // host: 'http://techreadytweets.azurewebsites.net'
+});
 
 // Uncomment to use local storage!
 // App.ApplicationSerializer = DS.LSSerializer.extend();

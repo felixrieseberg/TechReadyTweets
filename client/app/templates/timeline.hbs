@@ -16,7 +16,7 @@
 </div>
 
 <h2>Timeline</h2>
-{{#each tweet in model itemController="tweet"}}
+{{#each tweet in arrangedContent itemController="tweet"}}
     <div class="well">
         <p>{{tweet.message}}</p>
         <small>- {{tweet.author}} at {{tweet.created}}</small>

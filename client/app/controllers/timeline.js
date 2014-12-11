@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
+    sortProperties: ['timestamp'],
+    sortAscending: false,
+
     tweetDisabled: function () {
         var name = this.get('name'),
             draft = this.get('tweetDraft');
@@ -12,7 +15,8 @@ export default Ember.Controller.extend({
         }
     }.property('name', 'tweetDraft'),
 
-    init: function () { 
+    init: function () {
+        this._super();
         this.refreshData();
     },
 
