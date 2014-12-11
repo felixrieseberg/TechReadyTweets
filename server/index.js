@@ -1,15 +1,18 @@
 var fortune = require('fortune'),
 	express = require('express');
 
-var app = fortune ({
-    db: 'techreadytweets'
-  })
-  .resource('tweet', {
-    author: String,
-    message: String,
-    timestamp: Number 
-  });
+var server = function () {
+    var app = fortune ({
+        db: 'techreadytweets'
+    })
+    .resource('tweet', {
+        author: String,
+        message: String,
+        timestamp: Number 
+    });
 
-app.use(express.static(__dirname + '/../client/dist'));
+    app.use(express.static(__dirname + '/../client/dist'));
+    app.listen(process.env.PORT || 8888);
+};
 
-app.listen(process.env.PORT || 80);
+module.exports = server;
