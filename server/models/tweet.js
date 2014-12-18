@@ -19,11 +19,11 @@ Tweet.prototype.generateEntity = function() {
         author: entGen.String(this.author),
         message: entGen.String(this.message),
         timestamp: entGen.Int64(this.timestamp),
-    }
-}
+    };
+};
 
-Tweet.parseEntity = function (entity) {
+Tweet.parseEntity = function(entity) {
     return new Tweet(entity.author._, entity.message._, entity.timestamp._, entity.PartitionKey._, entity.RowKey._);
-}
+};
 
 module.exports = Tweet;
