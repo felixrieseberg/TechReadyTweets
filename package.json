@@ -1,20 +1,13 @@
 {
   "name": "TechReadyTweets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.10.4",
-    "fortune": "https://github.com/nolanlawson/fortune/tarball/master"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1"
-  },
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node ./server/bin/www"
   },
-  "author": "Jason Poon <github@jasonpoon.ca> (http://jasonpoon.ca/)",
-  "license": "ISC"
+  "description": "TechReadyTweets",
+  "author": {
+    "name": "japoon",
+    "email": ""
+  }
 }

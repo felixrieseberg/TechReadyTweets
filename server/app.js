@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/', routes);
+//app.use('/', routes);
 app.use('/tweets', tweets);
 
 // catch 404 and forward to error handler
@@ -62,6 +62,5 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;

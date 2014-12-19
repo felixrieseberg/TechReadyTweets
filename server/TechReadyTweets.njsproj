@@ -32,6 +32,7 @@
   <ItemGroup>
     <Compile Include="config.js" />
     <Compile Include="app.js" />
+    <Compile Include="gruntfile.js" />
     <Compile Include="models\tweet.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\tweets.js" />
