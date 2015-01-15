@@ -5,7 +5,7 @@ function Tweet(author, message, timestamp, partitionKey, rowKey) {
     this.PartitionKey = partitionKey || Tweet.partitionKey,
     this.RowKey = rowKey || (new Date(3000, 1) - Date.now()).toString(),
 
-    this.id = this.rowKey;
+    this.id = this.RowKey;
     this.author = author;
     this.message = message;
     this.timestamp = timestamp;
