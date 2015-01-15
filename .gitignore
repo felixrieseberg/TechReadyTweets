@@ -17,5 +17,8 @@ libpeerconnection.log
 npm-debug.log
 testem.log
 
+# windows
+*.sln
+
 *.swp
 .ntvs_analysis.dat

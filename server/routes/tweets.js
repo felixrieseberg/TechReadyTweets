@@ -8,8 +8,7 @@ var router = express.Router();
 var tableName = 'tweets';
 
 router.get('/', function (req, res) {
-    var query = new azure.TableQuery()
-        .where('PartitionKey eq ?', 'tweet');
+    var query = new azure.TableQuery().where('PartitionKey eq ?', Tweet.partitionKey);
 
     tableSvc.queryEntities(tableName, query, null, function(error, result, response) {
         if (error) {
@@ -17,10 +16,9 @@ router.get('/', function (req, res) {
         }
 
         var tweets = [];
-        for (var i = 0; i < result.entries.length; i++) {
-            var item = result.entries[i];
-            tweets.push(Tweet.parseEntity(item));
-        }
+        result.entries.forEach(function(tweet) {
+            tweets.push(Tweet.parseEntity(tweet));
+        });
 
         res.json({ tweets: tweets });
     });
