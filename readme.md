@@ -7,3 +7,6 @@ To start the app, run `npm install` and then `npm start`.
 ## Structure
 - `client` houses the Ember client's source code. If you want to play with the Ember app (and run commands like `ember serve`), do it in this directory.
 - `server` houses the server (surprising, huh?). It does not only take care of managing the tweets, but also serves the compiled client (located in `client/dist`). In order to recompile, run `ember build` in `client`.
+
+## License
+Copyright (c) Microsoft Corporation, licensed under The MIT License (MIT). Please see LICENSE for more information.
