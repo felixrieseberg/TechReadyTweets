@@ -30,7 +30,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="config.js" />
     <Compile Include="app.js" />
     <Compile Include="gruntfile.js" />
     <Compile Include="models\tweet.js" />
