@@ -1,15 +1,12 @@
 ﻿# Server
 
-This README outlines the details of collaborating on this Node.js application.
-
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the following things properly installed on your computer:
 
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM) 
-* [Visual Studio](http://www.visualstudio.com/) with 
-* [Node.js Tools for Visual Studio](http://nodejstools.codeplex.com/)
+* (Optional) [Visual Studio 2013](http://www.visualstudio.com/) with [Node.js Tools for Visual Studio](http://nodejstools.codeplex.com/)
 
 ## Installation
 
@@ -24,7 +21,7 @@ You will need the following things properly installed on your computer.
 
 ## Further Reading / Useful Links
 
-* [Node.js](http://nodejs.com/)
 * [Grunt Sample File](http://gruntjs.com/sample-gruntfile)
-* [Grunt Launcher VS Extension](https://visualstudiogallery.msdn.microsoft.com/dcbc5325-79ef-4b72-960e-0a51ee33a0ff)
-* [Postman](http://www.getpostman.com/)
+* [Grunt Launcher VS Extension](https://visualstudiogallery.msdn.microsoft.com/dcbc5325-79ef-4b72-960e-0a51ee33a0ff): Enables launching of Grunt tasks from within Visual Studio
+* [Postman](http://www.getpostman.com/): REST Client
+	* [Postman Collection](https://www.getpostman.com/collections/983efd84bbd076d27ec2): Pre-configured collection for hitting server endpoints

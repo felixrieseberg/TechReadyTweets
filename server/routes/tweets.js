@@ -27,7 +27,7 @@ router.post('/', function (req, res, next) {
     }
     
     var tweet = new Tweet(author, message);
-    db.insert(tweet, function (err, item) {
+    db.insert(tweet, function (err) {
         if (err) {
             return next({ status: 500, message: err });
         }
