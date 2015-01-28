@@ -2,7 +2,7 @@
 var router = express.Router();
 var Tweet = require('../models/tweet.js');
 var Datastore = require('nedb')
-  , db = new Datastore();
+  , db = new Datastore({ filename: "techreadytweets", autoload: true });
 
 router.get('/', function (req, res, next) {
     db.find({}).sort({ timestamp: -1}).exec(function (err, tweets) {
