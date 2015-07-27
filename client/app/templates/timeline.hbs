@@ -9,16 +9,16 @@
         <div class="col-md-10">
             {{input value=tweetDraft type="text" class="form-control floating-label" placeholder="What's your tweet?"}}
         </div>
-        <div class="col-md-2 col-md-offset-10 text-right">
-            <button {{action 'tweet'}} {{bind-attr disabled=tweetDisabled}} class="btn btn-primary btn-raised">Tweet</button>
+        <div class="col-md-2 col-md-offset-10">
+            <button {{action "tweet"}} disabled={{tweetDisabled}} type="button" class="btn btn-primary">Tweet</button>
         </div>
     </div>
 </div>
 
 <h2>Timeline</h2>
-{{#each tweet in arrangedContent itemController="tweet"}}
+{{#each model as |tweet|}}
     <div class="well">
         <p>{{tweet.message}}</p>
-        <small>- {{tweet.author}} at {{tweet.created}}</small>
+        <small>- {{tweet.author}} at {{ago tweet.timestamp}}</small>
     </div>
 {{/each}}

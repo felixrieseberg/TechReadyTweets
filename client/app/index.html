@@ -3,24 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TechReadyTweets</title>
+    <title>Techreadytweets</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for 'head'}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/client.css">
+    <link rel="stylesheet" href="assets/techreadytweets.css">
+
+    {{content-for 'head-footer'}}
   </head>
   <body>
     {{content-for 'body'}}
 
     <script src="assets/vendor.js"></script>
-    <script src="assets/client.js"></script>
-    <script>
-      $(document).ready(function() {
-          $.material.init();
-      });
-    </script>
+    <script src="assets/techreadytweets.js"></script>
+
+    {{content-for 'body-footer'}}
   </body>
 </html>
