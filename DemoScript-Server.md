@@ -3,12 +3,11 @@
 * using Visual Studio Code, grunt, node, express
 
 #setup
-```
+```bash
 npm install -g express-generator
 express <project_name>
 cd <project_name> && npm install
 SET DEBUG=techreadytweetsdemo:* & npm start
-
 ```
 * Run in Visual Studio Code
 	* launch.json: `"env": { "DEBUG": "techreadytweetsdemo:*" }`
@@ -16,7 +15,7 @@ SET DEBUG=techreadytweetsdemo:* & npm start
 
 #grunt
 * sample gruntfile
-   ```
+   ```json
    jshint: {
       files: ['Gruntfile.js', 'routes/*.js', '*.js'],
    ```
