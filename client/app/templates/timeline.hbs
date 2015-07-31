@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span>Hi {{name}}, let's tweet something!</span>
+    </div>
+    <div class="panel-body row">
+        <div class="col-md-2">
+            {{input value=name type="text" class="form-control floating-label" placeholder="What's your name?"}}
+        </div>
+        <div class="col-md-10">
+            {{input value=tweetDraft type="text" class="form-control floating-label" placeholder="What's your tweet?"}}
+        </div>
+        <div class="col-md-2 col-md-offset-10">
+            <button {{action "tweet"}} disabled={{tweetDisabled}} type="button" class="btn btn-primary">Tweet</button>
+        </div>
+    </div>
+</div>
+<h2>Timeline</h2>
+{{#each sortedTweets as |tweet|}}
+    <div class="well">
+        <p>{{tweet.message}}</p>
+        <small>- {{tweet.name}}, {{ago tweet.timestamp}}</small>
+</div>
+{{/each}}
