@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+    sorting: ['timestamp:desc'],
+    sortedTweets: Ember.computed.sort('model', 'sorting'),
+
     tweetDisabled: function () {
         var name = this.get('name'),
             draft = this.get('tweetDraft');

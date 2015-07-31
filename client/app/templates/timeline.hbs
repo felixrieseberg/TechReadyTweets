@@ -16,7 +16,7 @@
 </div>
 
 <h2>Timeline</h2>
-{{#each model as |tweet|}}
+{{#each sortedTweets as |tweet|}}
     <div class="well">
         <p>{{tweet.message}}</p>
         <small>- {{tweet.author}} at {{ago tweet.timestamp}}</small>
