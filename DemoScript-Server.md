@@ -7,17 +7,17 @@
 npm install -g express-generator
 express <project_name>
 cd <project_name> && npm install
-SET DEBUG=techreadytweetsdemo:* & npm start
+SET DEBUG=<project_name>:* & npm start
 ```
 * Run in Visual Studio Code
-	* launch.json: `"env": { "DEBUG": "techreadytweetsdemo:*" }`
+	* launch.json: `"env": { "DEBUG": "<project_name>:*" }`
 	* built-in debugging support, intellisense
 
 #grunt
 * sample gruntfile
    ```json
    jshint: {
-      files: ['Gruntfile.js', 'routes/*.js', '*.js'],
+      files: ['Gruntfile.js', '{models,routes}/*.js', '*.js'],
    ```
   * install dependencies
    ```
@@ -34,23 +34,29 @@ SET DEBUG=techreadytweetsdemo:* & npm start
 
 ## post
 ```
-var author = req.body.tweet.author;
-var message = req.body.tweet.message;
 
-if (!author || !message) {
-return next({ status: 400 });
+if (!req.body.tweet) {
+  return next({status: 400});
 }
 
-var tweet = new Tweet(author, message);
+var author = req.body.tweet.author;
+var message = req.body.tweet.message;
+var timestamp = req.body.tweet.timestamp;
+
+if (!author || !message || !timestamp) {
+  return next({ status: 400 });
+}
+
+var tweet = new Tweet(author, message, timestamp);
 ```
 
 ## model
 
 ```
-var tweet = function (author, message) {
+var tweet = function (author, message, timestamp) {
 	this.author = author;
   	this.message = message;
-  	this.timestamp = Date.now().toString();
+  	this.timestamp = timestamp;
   	this.id = this.timestamp;
 }
 
