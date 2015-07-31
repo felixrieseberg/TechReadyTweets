@@ -169,3 +169,35 @@ app/templates/timeline.js
 ```
 <button disabled={{tweetDisabled}}...>
 ```
+
+##### Sorting
+app/controllers/timeline.js
+```
+sorting: ['timestamp:desc'],
+sortedTweets: Ember.computed.sort('model', 'sorting');
+```
+
+##### Refresh
+app/routes/timeline.js
+```
+actions: {
+    refresh: function () {
+        this.refresh();
+    }
+}
+```
+
+app/controllers/timeline.js
+```
+init: function () {
+    this._super();
+    this.refreshData();
+},
+
+refreshData: function () {
+    Ember.run.later(this, () => {
+        this.send('refresh');
+        this.refreshData();
+    }, 600);
+},
+```
