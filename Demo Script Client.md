@@ -4,6 +4,15 @@ ember new techreadytweets
 mv techreadytweets client
 ```
 
+jsconfig.json
+```
+{
+	"compilerOptions": {
+		"target": "ES6"
+	}
+}
+```
+
 ##### Add dependencies
 ```
 bower install jquery --save
