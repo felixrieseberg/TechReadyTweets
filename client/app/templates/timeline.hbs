@@ -19,6 +19,6 @@
 {{#each sortedTweets as |tweet|}}
     <div class="well">
         <p>{{tweet.message}}</p>
-        <small>- {{tweet.author}} at {{ago tweet.timestamp}}</small>
+        <small>- {{tweet.author}}, {{ago tweet.timestamp}}</small>
     </div>
 {{/each}}
